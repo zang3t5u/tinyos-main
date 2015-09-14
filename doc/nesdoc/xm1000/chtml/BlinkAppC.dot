@@ -1,0 +1,17 @@
+digraph "BlinkAppC" {
+  "BlinkC" [fontsize=12, shape=box, URL="../chtml/BlinkC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "BlinkC" [fontsize=12, shape=box, URL="../chtml/BlinkC.html"];
+  "BlinkAppC.Timer0" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(Timer0)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "BlinkC" [fontsize=12, shape=box, URL="../chtml/BlinkC.html"];
+  "BlinkAppC.Timer1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(Timer1)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "BlinkC" [fontsize=12, shape=box, URL="../chtml/BlinkC.html"];
+  "BlinkAppC.Timer2" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(Timer2)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "BlinkC" [fontsize=12, shape=box, URL="../chtml/BlinkC.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "BlinkC" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "BlinkC" -> "BlinkAppC.Timer0" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "BlinkC" -> "BlinkAppC.Timer1" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "BlinkC" -> "BlinkAppC.Timer2" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "BlinkC" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+}

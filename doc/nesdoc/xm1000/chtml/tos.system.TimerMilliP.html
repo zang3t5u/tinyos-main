@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.system.TimerMilliP</title>
+  </head>
+  <body>
+    <h2>Component: tos.system.TimerMilliP
+    </h2>
+    <b>configuration TimerMilliP</b>
+    <p>
+ Components should never wire to this component. This is the
+ underlying configuration of virtualized millisecond timers. 
+ It auto-wires wires the timer
+ implementation (TimerC) to the boot sequence and exports the
+ various Timer interfaces.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Philip Levis
+ 
+      </dd>
+      <dd>
+        Cory Sharp
+ 
+      </dd>
+      <dt><b>Date:</b>
+      <dd>
+          May 16 2005
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.lib.timer.Timer.html">Timer</a>&lt;TMilli&gt; as <b>TimerMilli</b>[uint8_t]</div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" id="node2" href="../chtml/tos.chips.msp430.timer.HilTimerMilliC.html" title="HilTimerMilliC" alt="" coords="75,128,207,187">
+
+      <area shape="poly" id="edge1" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="" coords="58,59,58,81,64,103,75,117,70,120,59,105,52,82,53,59">
+
+      <area shape="rect" id="edge1-label" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;[uint8_t]" alt="" coords="61,89,195,103">
+
+      <area shape="rect" id="node3" href="../chtml/tos.system.MainC.html" title="MainC" alt="" coords="183,5,264,64">
+
+      <area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="217,65,197,105,186,119,182,116,192,103,212,63">
+
+      <area shape="rect" id="edge2-label" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="204,89,224,103">
+
+    </map>
+    <img src="tos.system.TimerMilliP.png" usemap="#comp" id=imgwiring>
+  </body>
+</html>

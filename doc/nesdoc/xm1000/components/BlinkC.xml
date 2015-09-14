@@ -1,0 +1,103 @@
+<?xml version="1.0" ?><component loc="50:BlinkC.nc" nicename="BlinkC" qname="BlinkC" safe="">
+      <module/>
+    <specification><interface loc="52:BlinkC.nc" name="Timer0" provided="0" ref="0x2b6a5a7d37f0">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer0" ref="0x2b6a5a7d37f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b6a5a7ba1f0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b6a5a7ba560"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b6a5a7d1cf0" scoped=""/>
+        <function-ref name="fired" ref="0x2b6a5a7d2300" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b6a5a7d10d0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b6a5a7d2c00" scoped=""/>
+        <function-ref name="getdt" ref="0x2b6a5a7d0660" scoped=""/>
+        <function-ref name="gett0" ref="0x2b6a5a7d01e0" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b6a5a7d2780" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b6a5a7b7480" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b6a5a7d16e0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b6a5a7b7950" scoped=""/>
+        <function-ref name="stop" ref="0x2b6a5a7b7e20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:BlinkC.nc" name="Boot" provided="0" ref="0x2b6a5a7e9790">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x2b6a5a7e9790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x2b6a5a7e9b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:BlinkC.nc" name="Timer1" provided="0" ref="0x2b6a5a7d0cb0">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer1" ref="0x2b6a5a7d0cb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b6a5a7ba1f0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b6a5a7ba560"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b6a5a7cb220" scoped=""/>
+        <function-ref name="fired" ref="0x2b6a5a7cd7c0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b6a5a7cc590" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b6a5a7cc110" scoped=""/>
+        <function-ref name="getdt" ref="0x2b6a5a7cbb20" scoped=""/>
+        <function-ref name="gett0" ref="0x2b6a5a7cb6a0" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b6a5a7cdc40" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b6a5a7cf940" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b6a5a7ccba0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b6a5a7cfe10" scoped=""/>
+        <function-ref name="stop" ref="0x2b6a5a7cd340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:BlinkC.nc" name="Leds" provided="0" ref="0x2b6a5a7dd0d0">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x2b6a5a7dd0d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2b6a5a7dd450" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2b6a5a7dd5e0" scoped=""/>
+        <function-ref name="led1On" ref="0x2b6a5a7dd770" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2b6a5a7dd900" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2b6a5a7dda90" scoped=""/>
+        <function-ref name="get" ref="0x2b6a5a7ddc20" scoped=""/>
+        <function-ref name="led1Off" ref="0x2b6a5a7dddb0" scoped=""/>
+        <function-ref name="led2Off" ref="0x2b6a5a7e94d0" scoped=""/>
+        <function-ref name="set" ref="0x2b6a5a7e9020" scoped=""/>
+        <function-ref name="led0On" ref="0x2b6a5a7e91b0" scoped=""/>
+        <function-ref name="led2On" ref="0x2b6a5a7e9340" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:BlinkC.nc" name="Timer2" provided="0" ref="0x2b6a5a7c9190">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer2" ref="0x2b6a5a7c9190" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b6a5a7ba1f0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b6a5a7ba560"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b6a5a7ec630" scoped=""/>
+        <function-ref name="fired" ref="0x2b6a5a7eebf0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b6a5a7ed990" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b6a5a7ed510" scoped=""/>
+        <function-ref name="getdt" ref="0x2b6a5a7eb020" scoped=""/>
+        <function-ref name="gett0" ref="0x2b6a5a7ecab0" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b6a5a7ed090" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b6a5a7c9d80" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b6a5a7ec020" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b6a5a7ee2a0" scoped=""/>
+        <function-ref name="stop" ref="0x2b6a5a7ee770" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

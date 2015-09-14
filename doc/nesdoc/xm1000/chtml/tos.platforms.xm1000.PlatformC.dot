@@ -1,0 +1,11 @@
+digraph "tos.platforms.xm1000.PlatformC" {
+  n0x2b6a5a5fcda0 [shape=ellipse, style=filled, label="Init", fontsize=12];
+  "PlatformP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.xm1000.PlatformP.html"];
+  "PlatformP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.xm1000.PlatformP.html"];
+  "Msp430ClockC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.timer.Msp430ClockC.html"];
+  "PlatformP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.xm1000.PlatformP.html"];
+  "MotePlatformC" [fontsize=12, shape=box, URL="../chtml/tos.platforms.xm1000.MotePlatformC.html"];
+  "n0x2b6a5a5fcda0" -> "PlatformP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "PlatformP" -> "Msp430ClockC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "PlatformP" -> "MotePlatformC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

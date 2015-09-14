@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><component loc="3:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP" safe="">
+      <module/>
+    <specification><interface loc="5:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="MoteInit" provided="0" ref="0x2b6a5a613700">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MoteInit" ref="0x2b6a5a613700" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a613a80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="Msp430ClockInit" provided="0" ref="0x2b6a5a612520">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430ClockInit" ref="0x2b6a5a612520" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a6128a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="Init" provided="1" ref="0x2b6a5a613020">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b6a5a613020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a6133a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="LedsInit" provided="0" ref="0x2b6a5a613de0">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LedsInit" ref="0x2b6a5a613de0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a612180" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

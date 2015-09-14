@@ -1,0 +1,109 @@
+<?xml version="1.0" ?><component abstract="" loc="44:/opt/tinyos-main/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="TimerMilliC">
+      <documentation loc="33:/opt/tinyos-main/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/opt/tinyos-main/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x2b6a5aa9a020" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2b6a5aa91610" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="45:/opt/tinyos-main/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2b6a5aa9a020">
+      <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x2b6a5aa9a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b6a5a7ba1f0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b6a5a7ba560"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b6a5aa96630" scoped=""/>
+        <function-ref name="fired" ref="0x2b6a5aa98a60" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b6a5aa97920" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b6a5aa974a0" scoped=""/>
+        <function-ref name="getdt" ref="0x2b6a5aa95020" scoped=""/>
+        <function-ref name="gett0" ref="0x2b6a5aa96ab0" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b6a5aa97020" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b6a5aa9ac10" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b6a5aa96020" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b6a5aa98110" scoped=""/>
+        <function-ref name="stop" ref="0x2b6a5aa985e0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="49:/opt/tinyos-main/tos/system/TimerMilliP.nc" name="TimerMilli" provided="1" ref="0x2b6a5aa91610">
+      <component-ref nicename="tos.system.TimerMilliP" qname="TimerMilliP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x2b6a5aa91610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x2b6a5a7ba1f0"/>
+            <typename><typedef-ref name="TMilli" ref="0x2b6a5a7ba560"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2b6a59749160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2b6a5aac0c40" scoped=""/>
+        <function-ref name="fired" ref="0x2b6a5aac11e0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2b6a5aac0020" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2b6a5aac1ae0" scoped=""/>
+        <function-ref name="getdt" ref="0x2b6a5aabf590" scoped=""/>
+        <function-ref name="gett0" ref="0x2b6a5aabf110" scoped=""/>
+        <function-ref name="isRunning" ref="0x2b6a5aac1660" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2b6a5aa90390" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2b6a5aac0630" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2b6a5aa90860" scoped=""/>
+        <function-ref name="stop" ref="0x2b6a5aa90d30" scoped=""/>
+      </interface-functions>
+    </interface><component loc="48:/opt/tinyos-main/tos/system/TimerMilliP.nc" nicename="tos.system.TimerMilliP" qname="TimerMilliP">
+      <documentation loc="34:/opt/tinyos-main/tos/system/TimerMilliP.nc">
+        <short>
+ Components should never wire to this component.</short>
+        <long>
+ Components should never wire to this component. This is the
+ underlying configuration of virtualized millisecond timers. 
+ It auto-wires wires the timer
+ implementation (TimerC) to the boot sequence and exports the
+ various Timer interfaces.
+
+ @author Philip Levis
+ @author Cory Sharp
+ @date   May 16 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="54:/opt/tinyos-main/tos/system/TimerMilliP.nc">
+          <from><interface-ref name="TimerMilli" ref="0x2b6a5aa91610" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x2b6a5aaba1d0" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-main/tos/system/TimerMilliP.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2b6a5a5fdd90" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b6a5aabb400" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

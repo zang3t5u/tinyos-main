@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><component loc="29:/opt/tinyos-main/tos/platforms/xm1000/PlatformC.nc" nicename="tos.platforms.xm1000.PlatformC" qname="PlatformC">
+      <documentation loc="23:/opt/tinyos-main/tos/platforms/xm1000/PlatformC.nc">
+        <short>
+ </short>
+        <long>
+ @author Manuel Fernandez
+ @version $Revision: 1.5 $ $Date: 2011/08/1 09:24:31 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/opt/tinyos-main/tos/platforms/xm1000/PlatformC.nc">
+          <from><interface-ref name="Init" ref="0x2b6a5a5fcda0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b6a5a613020" scoped=""/></to>
+        </wire>
+        <wire loc="38:/opt/tinyos-main/tos/platforms/xm1000/PlatformC.nc">
+          <from><interface-ref name="Msp430ClockInit" ref="0x2b6a5a612520" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b6a5a5f52e0" scoped=""/></to>
+        </wire>
+        <wire loc="39:/opt/tinyos-main/tos/platforms/xm1000/PlatformC.nc">
+          <from><interface-ref name="MoteInit" ref="0x2b6a5a613700" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b6a5a60b1a0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="31:/opt/tinyos-main/tos/platforms/xm1000/PlatformC.nc" name="Init" provided="1" ref="0x2b6a5a5fcda0">
+      <component-ref nicename="tos.platforms.xm1000.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b6a5a5fcda0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a5f7180" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="7:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="Msp430ClockInit" provided="0" ref="0x2b6a5a612520">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430ClockInit" ref="0x2b6a5a612520" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a6128a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="MoteInit" provided="0" ref="0x2b6a5a613700">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MoteInit" ref="0x2b6a5a613700" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a613a80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="2:/opt/tinyos-main/tos/platforms/xm1000/MotePlatformC.nc" name="Init" provided="1" ref="0x2b6a5a60b1a0">
+      <component-ref nicename="tos.platforms.xm1000.MotePlatformC" qname="MotePlatformC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b6a5a60b1a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a60b520" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-main/tos/chips/msp430/timer/Msp430ClockC.nc" name="Init" provided="1" ref="0x2b6a5a5f52e0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b6a5a5f52e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a5f5660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" name="Init" provided="1" ref="0x2b6a5a613020">
+      <component-ref nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x2b6a5a613020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2b6a5a6133a0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/opt/tinyos-main/tos/chips/msp430/timer/Msp430ClockC.nc" nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC">
+      <documentation loc="33:/opt/tinyos-main/tos/chips/msp430/timer/Msp430ClockC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/opt/tinyos-main/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Msp430ClockInit" ref="0x2b6a5a62d850" scoped=""/></from>
+          <to><interface-ref name="Msp430ClockInit" ref="0x2b6a5a63ea70" scoped=""/></to>
+        </wire>
+        <wire loc="46:/opt/tinyos-main/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Init" ref="0x2b6a5a5f52e0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2b6a5a63e3c0" scoped=""/></to>
+        </wire>
+        <wire loc="48:/opt/tinyos-main/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x2b6a5a34d020" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x2b6a5a63ccc0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="3:/opt/tinyos-main/tos/platforms/xm1000/PlatformP.nc" nicename="tos.platforms.xm1000.PlatformP" qname="PlatformP" safe="">
+      <module/>
+    </component><component loc="1:/opt/tinyos-main/tos/platforms/xm1000/MotePlatformC.nc" nicename="tos.platforms.xm1000.MotePlatformC" qname="MotePlatformC" safe="">
+      <module/>
+    </component></referenced></component>

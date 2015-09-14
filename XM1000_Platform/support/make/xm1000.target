@@ -1,0 +1,32 @@
+#-*-Makefile-*- vim:syntax=make
+#$Id: xm1000.target,v 1.8 2012/12/20 09:34:13 Manuel Fernandez Exp $
+
+PLATFORM ?= xm1000
+
+
+MSP_BSL ?= xm1000-bsl
+MSP_BSL_FLAGS = --tmote2618 
+MSP_MCU ?= msp430f2618
+MSP_GCC ?= msp430-gcc
+MSP_NESC_TARGET ?= msp430
+
+HAS_MDATA = $(shell msp430-gcc --target-help | grep mdata-64k | awk '{print $1}')
+ifneq "$(HAS_MDATA)" ""
+PFLAGS += -mdata-64k
+endif
+
+VOLUME_FILE = volumes-stm25p.xml
+VOLUME_ALLOCATOR ?= tos-storage-stm25p
+
+ifdef CC2420_CHANNEL
+PFLAGS += -DCC2420_DEF_CHANNEL=$(CC2420_CHANNEL)
+endif
+
+$(call TOSMake_include_platform,msp)
+
+xm1000: $(BUILD_DEPS)
+	@:
+	
+	
+
+
