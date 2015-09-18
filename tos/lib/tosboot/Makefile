@@ -83,6 +83,13 @@ ifeq ($(MAKECMDGOALS),telosb)
   POST_BUILD_EXTRA_DEPS += strip_iv
 endif
 
+ifeq ($(MAKECMDGOALS),xm1000)
+  PFLAGS += -DTOSBOOT_START=0x4000 -DTOSBOOT_END=0x4a00
+  PFLAGS += -Imsp430 -Imsp430f2618 -Istm25p -Ixm1000 -Ilib
+  PFLAGS += -I../net/Deluge
+  BUILD_DEPS += strip_iv
+endif
+
 ifeq ($(MAKECMDGOALS),epic)
   CFLAGS += -DTOSBOOT_START=0x4000 -DTOSBOOT_END=0x4a00
   CFLAGS += -Imsp430 -Imsp430f1611 -Iepic -Ilib
