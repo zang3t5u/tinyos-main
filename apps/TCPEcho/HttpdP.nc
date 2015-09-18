@@ -28,7 +28,7 @@ module HttpdP {
     char reply[24];
     memcpy(reply, "led0: 0 led1: 0 led2: 0\n", 24);
 
-    printfUART("request: '%s'\n", request);
+    printf("request: '%s'\n", request);
 
     if (len >= 10 &&
         request[0] == '/' &&
@@ -70,7 +70,7 @@ module HttpdP {
       *tx_buf_len = 100;
       return TRUE;
     }
-    printfUART("rejecting connection\n");
+    printf("rejecting connection\n");
     return FALSE;
   }
   event void Tcp.connectDone(error_t e) {

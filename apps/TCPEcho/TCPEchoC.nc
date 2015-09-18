@@ -31,7 +31,7 @@
  *
  */
 
-#include <6lowpan.h>
+#include <lib6lowpan/6lowpan.h>
 
 configuration TCPEchoC {
 
@@ -64,9 +64,9 @@ configuration TCPEchoC {
 
   components UdpC;
 
-  TCPEchoP.IPStats -> IPDispatchC.IPStats;
-  TCPEchoP.RouteStats -> IPDispatchC.RouteStats;
-  TCPEchoP.ICMPStats -> IPDispatchC.ICMPStats;
+  TCPEchoP.IPStats -> IPDispatchC;
+  TCPEchoP.RouteStats -> IPDispatchC;
+  TCPEchoP.ICMPStats -> IPDispatchC;
   TCPEchoP.UDPStats -> UdpC;
 
   components RandomC;
