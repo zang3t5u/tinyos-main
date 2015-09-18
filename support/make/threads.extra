@@ -88,7 +88,7 @@ THREADS_M16C60_INCLUDE_DIRS = -I$(THREADS_M16C60_DIR)
 THREADS_MULLE_INCLUDE_DIRS = -I$(TOS_THREADS_DIR)/platforms/mulle
 
 #Add CFLAGS for supported platforms
-ifneq ($(filter telos telosa telosb tmote,$(MAKECMDGOALS)),)
+ifneq ($(filter telos telosa telosb tmote xm1000,$(MAKECMDGOALS)),)
   CFLAGS += $(THREADS_MSP430_INCLUDE_DIRS)
   CFLAGS += $(THREADS_CC2420_INCLUDE_DIRS)
   CFLAGS += $(THREADS_TELOS_INCLUDE_DIRS)
@@ -97,6 +97,10 @@ ifneq ($(filter telos telosa telosb tmote,$(MAKECMDGOALS)),)
   #what components should be included
   ifneq ($(filter telosb,$(MAKECMDGOALS)),)
     CFLAGS += -DPLATFORM_TELOSB
+  endif
+
+  ifneq ($(filter xm1000,$(MAKECMDGOALS)),)
+    CFLAGS += -DPLATFORM_XM1000
   endif
 endif
 ifneq ($(filter epic,$(MAKECMDGOALS)),)

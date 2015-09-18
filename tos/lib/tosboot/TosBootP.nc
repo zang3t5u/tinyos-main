@@ -156,7 +156,7 @@ implementation {
     secLength = extFlashReadAddr();
     curAddr = curAddr + 8;
 
-#if defined(PLATFORM_TELOSB) || defined (PLATFORM_EPIC) || defined (PLATFORM_TINYNODE)
+#if defined(PLATFORM_TELOSB) || defined (PLATFORM_EPIC) || defined (PLATFORM_TINYNODE) || defined(PLATFORM_XM1000)
     if (intAddr != TOSBOOT_END) {
 #elif defined(PLATFORM_MICAZ) || defined(PLATFORM_IRIS)
     if (intAddr != 0) {

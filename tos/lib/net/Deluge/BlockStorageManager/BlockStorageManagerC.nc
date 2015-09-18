@@ -74,7 +74,7 @@ implementation
   BlockStorageManagerP.SubBlockWrite[VOLUME_DELUGE2]     -> BlockStorageC_2;
   BlockStorageManagerP.SubBlockWrite[VOLUME_DELUGE3]     -> BlockStorageC_3;
 
-#if defined(PLATFORM_TELOSB)
+#if defined(PLATFORM_TELOSB) || defined(PLATFORM_XM1000)
   BlockStorageManagerP.SubStorageMap[VOLUME_GOLDENIMAGE] -> BlockStorageC_Golden;
   BlockStorageManagerP.SubStorageMap[VOLUME_DELUGE1]     -> BlockStorageC_1;
   BlockStorageManagerP.SubStorageMap[VOLUME_DELUGE2]     -> BlockStorageC_2;

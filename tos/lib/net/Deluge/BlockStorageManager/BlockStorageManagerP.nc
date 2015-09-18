@@ -45,7 +45,7 @@ generic module BlockStorageManagerP(uint8_t clients)
     interface BlockRead as SubBlockRead[volume_id_t volume_id];
     interface BlockWrite as SubBlockWrite[volume_id_t volume_id];
     interface VolumeId[uint8_t client];
-#if defined(PLATFORM_TELOSB)
+#if defined(PLATFORM_TELOSB) || defined(PLATFORM_XM1000)
     interface StorageMap as SubStorageMap[volume_id_t volume_id];
 #elif defined(PLATFORM_MICAZ) || defined(PLATFORM_IRIS) || defined(PLATFORM_EPIC) || defined(PLATFORM_MULLE) || defined(PLATFORM_TINYNODE)
     interface At45dbVolume[volume_id_t volume_id];
@@ -188,7 +188,7 @@ implementation
   command storage_addr_t StorageMap.getPhysicalAddress[uint8_t volume_id](storage_addr_t addr)
   {
     storage_addr_t p_addr = 0xFFFFFFFF;
-#if defined(PLATFORM_TELOSB)
+#if defined(PLATFORM_TELOSB) || defined(PLATFORM_XM1000)
     p_addr = call SubStorageMap.getPhysicalAddress[volume_id](addr);
 #elif defined(PLATFORM_MICAZ) || defined(PLATFORM_IRIS) || defined(PLATFORM_EPIC) || defined(PLATFORM_MULLE) || defined(PLATFORM_TINYNODE)
     at45page_t page = call At45dbVolume.remap[volume_id]((addr >> AT45_PAGE_SIZE_LOG2));
@@ -200,7 +200,7 @@ implementation
     return p_addr;
   }
 
-#if defined(PLATFORM_TELOSB)
+#if defined(PLATFORM_TELOSB) || defined(PLATFORM_XM1000)
   default command storage_addr_t SubStorageMap.getPhysicalAddress[uint8_t volume_id](storage_addr_t addr)
   {
     return 0xffffffff;

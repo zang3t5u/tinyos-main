@@ -80,7 +80,7 @@ implementation
 #elif defined(PLATFORM_MESHBEAN900)
 	components RF212DriverLayerC as RadioDriverLayerC;
 	components RF212RadioP as RadioP;
-#elif defined(PLATFORM_MICAZ) || defined(PLATFORM_TELOSA) || defined(PLATFORM_TELOSB)
+#elif defined(PLATFORM_MICAZ) || defined(PLATFORM_TELOSA) || defined(PLATFORM_TELOSB) || defined(PLATFORM_XM1000)
 	components CC2420XDriverLayerC as RadioDriverLayerC;
 	components CC2420XRadioP as RadioP;
 #elif defined(PLATFORM_UCMINI)

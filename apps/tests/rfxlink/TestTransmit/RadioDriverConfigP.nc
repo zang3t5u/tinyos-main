@@ -45,7 +45,7 @@ module RadioDriverConfigP
 		interface RF230DriverConfig as RadioDriverConfig;
 #elif defined(PLATFORM_MESHBEAN900)
 		interface RF212DriverConfig as RadioDriverConfig;
-#elif defined(PLATFORM_MICAZ) || defined(PLATFORM_TELOSA) || defined(PLATFORM_TELOSB)
+#elif defined(PLATFORM_MICAZ) || defined(PLATFORM_TELOSA) || defined(PLATFORM_TELOSB) || defined(PLATFORM_XM1000)
 		interface CC2420XDriverConfig as RadioDriverConfig;
 #elif defined(PLATFORM_UCMINI)
 		interface RFA1DriverConfig as RadioDriverConfig;

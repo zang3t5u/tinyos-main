@@ -1,13 +1,13 @@
 <tos_image>
   <ident>
-    <username>almighty</username>
-    <appname>BaseStationC</appname>
-    <deluge_support>no</deluge_support>
-    <timestamp>55F1A368L</timestamp>
-    <uidhash>A2B57BCEL</uidhash>
-    <platform>xm1000</platform>
-    <userhash>13A9CCA8L</userhash>
     <hostname>Blaze</hostname>
+    <username>almighty</username>
+    <uidhash>50F6559EL</uidhash>
+    <platform>xm1000</platform>
+    <deluge_support>no</deluge_support>
+    <timestamp>55FC1DC7L</timestamp>
+    <appname>BaseStationC</appname>
+    <userhash>13A9CCA8L</userhash>
   </ident>
   <image format="ihex">
 :103100005542200135D0085A82450E183140003111

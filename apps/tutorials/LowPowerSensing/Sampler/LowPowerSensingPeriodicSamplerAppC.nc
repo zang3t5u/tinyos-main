@@ -61,7 +61,7 @@ implementation {
 
 //Nasty hack since no uniform way of prividing LPL support as of yet
 #if defined(PLATFORM_TELOSB) || defined(PLATFORM_TMOTE) || defined(PLATFORM_MICAZ) || \
-    defined(PLATFORM_Z1)
+    defined(PLATFORM_Z1) || defined(PLATFORM_XM1000)
   components CC2420ActiveMessageC as LPLProvider;
   App.LPL -> LPLProvider;
 #endif

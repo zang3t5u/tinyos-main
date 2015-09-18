@@ -26,7 +26,7 @@ configuration PppRouterC {
   PppRouterP.PppIpv6 -> PppIpv6C;
   PppRouterP.Ppp -> PppDaemonC;
 
-#if defined(PLATFORM_TELOSB) || defined(PLATFORM_EPIC)
+#if defined(PLATFORM_TELOSB) || defined(PLATFORM_EPIC) || defined(PLATFORM_XM1000)
   components PlatformHdlcUartC as HdlcUartC;
 #else
   components DefaultHdlcUartC as HdlcUartC;
